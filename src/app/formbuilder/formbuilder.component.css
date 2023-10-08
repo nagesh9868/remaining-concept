@@ -1,0 +1,32 @@
+.isInvalid{
+    border: 1px solid red;
+}
+
+input{
+    outline: none;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.rigthBorder{
+    border-left: none;
+    color: red;
+}
+
+.left-border{
+    border-right: none;
+}
+
+button:disabled{
+    background-color: gray !important;
+    color: red;
+}
+
+.color-white{
+    color: white;
+    border-color: gray;
+}
+.color-red{
+    color: red;
+    border-color: red;
+}

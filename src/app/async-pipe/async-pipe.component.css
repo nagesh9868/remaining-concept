@@ -1,0 +1,39 @@
+.card{
+    display: inline-flex;
+    flex-direction: column;
+    width: 22.4rem;
+    border: 1px solid #123456;
+    margin: .4rem 1rem;
+    margin-right: 0;
+    border-radius: 1rem;
+    height: 25rem;
+    justify-content: space-around;
+}
+
+.title h4{
+    text-align: center;
+}
+
+.price h4{
+    text-align: center;
+}
+
+.image{
+    width: 22.4rem;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+}
+.image img{
+    width: 15rem;
+    height: 17rem;
+}
+
+
+button{
+    width: 22.4rem;
+    padding: 1.7rem;
+    background-color: lightgreen;
+    border-radius: 0 0 1rem 1rem ;
+    border: none;
+}

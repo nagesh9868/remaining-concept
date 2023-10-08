@@ -1,0 +1,34 @@
+<p>trackby works!</p>
+
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>gender</th>
+        <th>annualsalary</th>
+        <th>date of birth</th>
+        <th>Index</th>
+        <th>Is First</th>
+        <th>Is Last</th>
+        <th>Is Even</th>
+        <th>Is Odd</th>
+    </tr>
+    <tr *ngFor="let item of empList;trackBy:trackByEmpCode; let i=index; let isFirst=first; let isLast= last; let isEven=even; let isOdd = odd">
+        <td>{{item.name}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.annualSalary}}</td>
+        <td>{{item.dateOfBirth}}</td>
+        <td>{{i}}</td>
+        <td>{{isFirst}}</td>
+        <td>{{isLast}}</td>
+        <td>{{isEven}}</td>
+        <td>{{isOdd}}</td>
+    </tr>
+</table>
+<button (click)="getEmployeeList()">Refresh the list</button>
+
+
+<!-- <tr *ngFor="let item of empList;">
+<tr *ngFor="let item of empList;trackBy:trackByEmpCode;">
+<tr *ngFor="let item of empList;trackBy:trackByEmpCode; let i=index;">
+<tr *ngFor="let item of empList;trackBy:trackByEmpCode; let i=index; let isFirst=first; let isLast= last;"> -->

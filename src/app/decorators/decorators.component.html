@@ -1,0 +1,6 @@
+<p>decorators works!</p>
+
+<h3>this is the data from decorator service :- {{_dc.info}}</h3>
+<button (click)="changeColor()">change</button>
+<app-child-dec (messageOp)=messgaeFromChild($event)  [messageIp]="messageInput" ></app-child-dec>
+<div *ngIf="messageFromOp" appMethodDecorator>{{messageFromOp}}</div>

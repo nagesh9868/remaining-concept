@@ -1,0 +1,77 @@
+<p>formbuilder works!</p>
+<form [formGroup]="FB" (ngSubmit)="formData()">
+    <input type="text" class="left-border" [ngClass]="{'isInvalid': FB.controls.name.errors }" formControlName="name"
+        placeholder="Enter your Name"><input class="isInvalid rigthBorder color-white"
+        [ngClass]="{'color-red': FB.controls.name.errors}" type="button" [value]="FB.controls.name.errors?'i':'.'">
+    <a *ngIf="FB.controls.name.errors" class="color-red">
+        <a *ngIf="FB.controls.name.errors['required']" style="font-size: small;">
+            Name is Required
+        </a>
+        <a *ngIf="FB.controls.name.errors['minlength']" style="font-size: small;">
+            Atleast 5 characters are required
+        </a>
+    </a>
+    <br><br>
+    <input type="email" class="left-border" [ngClass]="{'isInvalid': FB.controls.email.errors }" formControlName="email"
+        placeholder="Enter your Email"><input class="isInvalid rigthBorder color-white"
+        [ngClass]="{'color-red': FB.controls.email.errors}" type="button" [value]="FB.controls.email.errors?'i':'.'">
+    <a *ngIf="FB.controls.email.errors" class="color-red">
+        <a *ngIf="FB.controls.email.errors['required']" style="font-size: small;">
+            Email is Required
+        </a>
+        <a *ngIf="FB.controls.email.errors['email']" style="font-size: small;">
+            Email is Invalid
+        </a>
+    </a>
+    <br><br>
+    <input type="text" class="left-border" [ngClass]="{'isInvalid': FB.controls.number.errors}"
+        formControlName="number" placeholder="Enter your Contact Number"><input
+        class="isInvalid rigthBorder color-white" [ngClass]="{'color-red': FB.controls.number.errors}" type="button"
+        [value]="FB.controls.number.errors?'i':'.'">
+    <a *ngIf="FB.controls.number.errors" class="color-red">
+        <a *ngIf="FB.controls.number.errors['required']" style="font-size: small;">
+            Contact no. is Required
+        </a>
+        <a *ngIf="FB.controls.number.errors['minlength']" style="font-size: small;">
+            Contact no. is Not Valid, atleast 10 character is required,
+        </a>
+        <!-- <a *ngIf="FB.controls.number.errors['pattern']" style="font-size: small;">
+            Only numbers are required
+        </a> -->
+    </a>
+    <br><br>
+    <input type="password" class="left-border" [ngClass]="{'isInvalid': FB.controls.password.errors}"
+        formControlName="password" placeholder="Enter your Password"><input class="isInvalid rigthBorder color-white"
+        [ngClass]="{'color-red': FB.controls.password.errors}" type="button"
+        [value]="FB.controls.password.errors?'i':'.'">
+    <a *ngIf="FB.controls.password.errors" class="color-red">
+        <a *ngIf="FB.controls.password.errors['required']" style="font-size: small;">
+            Password is required
+        </a>
+        <a *ngIf="FB.controls.password.errors['minlength']" style="font-size: small;">
+            At least 8 characters are required,
+        </a>
+        <a *ngIf="FB.controls.password.errors['pattern']" style="font-size: small;">
+            Required only alphabets & numbers
+        </a>
+    </a>
+    <br><br>
+    <button [disabled]="FB.controls.name.errors || FB.controls.email.errors || FB.controls.number.errors || FB.controls.password.errors " style="background-color:green; color: white;" (click)="getValue()" (click)="setValue()">Get
+        Value</button>&nbsp;&nbsp;
+    <button style="background-color: blue; color: white;" (click)="setValue()">Set Value</button>&nbsp;&nbsp;
+    <button style="background-color: lightcoral; color: white;" (click)="patchValue()">Patch Value</button>&nbsp;&nbsp;
+</form>
+
+<br><br>
+<form [formGroup]="loginForm" (ngSubmit)="loginFormData()">
+    <input type="text" formControlName="userName"><br><br>
+    <input type="password" formControlName="password"><br><br>
+    <button>Submit</button>
+</form>
+
+<br><br>
+<form #formData1="ngForm" (ngSubmit)="loginData(formData1.value)">
+    <input type="text" name="userName" ngModel><br><br>
+    <input type="password" name="password" ngModel ><br><br>
+    <button>Submit</button>    
+</form>

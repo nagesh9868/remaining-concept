@@ -1,0 +1,14 @@
+<p>tickrunchange works!</p>
+<input type="text" #something  (input)="keypress($event)" >
+
+<div>{{text}}</div>
+
+<!-- (input)="text = $event.target." -->
+
+<!-- (input)="keypress($event)" -->
+<div>{{currentTime}}</div>
+
+<button (click)="detach()">detach</button>
+<button (click)="reattach()">reattach</button>
+<button (click)="detectChanges()" >detectChanges</button>
+

@@ -1,0 +1,36 @@
+<header style="display: flex; flex-direction: column; border: 1px solid green;padding: 1rem; background-color: black;">
+    <div [style.backgroundColor]="'#'+color+899"
+    style="display: flex;justify-content: space-between; text-align:center;color: white; background-color: darksalmon; border-radius: 10px;">
+    <h3 style="margin: auto; cursor: pointer; color: lightgreen;" (click)="startColorChange()">Start Color Change</h3>
+    <h2 style="margin: auto;">Remaingin Concepts</h2>
+    <h3 style="margin: auto; cursor: pointer; color: red; " (click)="stopColorChange()">Stop Color Change</h3>
+</div>
+    <ul style="display: flex; text-decoration: none;padding-top: 1rem;font-weight: bolder;font-size: medium;">
+        <li><a [style.color]="'#'+color+154" routerLink="home">Home</a></li>
+        <li><a [style.color]="'#'+color+262" routerLink="child">Child</a></li>
+        <li><a [style.color]="'#'+color+363" routerLink="parent">Parent</a></li>
+        <li><a [style.color]="'#'+color+414" routerLink="hook-child">Hook-Child</a></li>
+        <li><a [style.color]="'#'+color+585" routerLink="lifecycle-Hook">Lifecycle-Hook</a></li>
+        <li><a [style.color]="'#'+color+646" routerLink="observable">Observable</a></li>
+        <li><a [style.color]="'#'+color+787" routerLink="viewChild">ViewChild/viewChildren</a></li>
+        <li><a [style.color]="'#'+color+858" routerLink="trackBy">TrackBy</a></li>
+        <li><a [style.color]="'#'+color+939" routerLink="analogue clock">Analog Clock</a></li>
+        <li><a [style.color]="'#'+color+886" routerLink="providers">Providers</a></li>
+        <li><a [style.color]="'#'+color+103" routerLink="decorators">Decorators</a></li>
+        <li><a [style.color]="'#'+color+436" routerLink="admin">LazyLoading/AdminModule</a></li>
+    </ul>
+    <ul style="display: flex; text-decoration: none;padding-top: 1rem;font-weight: bolder;font-size: medium;">
+        <li><a [style.color]="'#'+color+789" routerLink="directive">Directives</a></li>
+        <li><a [style.color]="'#'+color+612" routerLink="dependencyInj">DependencyInj</a></li>
+        <li><a [style.color]="'#'+color+345" routerLink="transclusion">Transclusion</a></li>
+        <li><a [style.color]="'#'+color+678" routerLink="testing">Testing</a></li>
+        <li><a [style.color]="'#'+color+901" routerLink="cookies">Cookies</a></li>
+        <li><a [style.color]="'#'+color+234" routerLink="changedetecion">Tick-Run-Change</a></li>
+        <li><a [style.color]="'#'+color+890" routerLink="transclusion">Transclusion</a></li>
+        <li><a [style.color]="'#'+color+654" routerLink="transclusion-child">Transclusion-Child</a></li>
+        <li><a [style.color]="'#'+color+567" routerLink="changeD">ChnageDetection</a></li>
+        <li><a [style.color]="'#'+color+567" routerLink="template">Template Reff</a></li>
+        <li><a [style.color]="'#'+color+567" routerLink="formbuilder">FormBuilder</a></li>
+        <li><a [style.color]="'#'+color+567" routerLink="async-pipe">Async Pipe</a></li>
+    </ul>
+</header>

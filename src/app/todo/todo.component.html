@@ -1,0 +1,18 @@
+<div style="display: flex;align-items: center; flex-direction: column;">
+    <input #title name="title" [(ngModel)]="titleBlank" style="margin: 1rem;" type="text" placeholder="Enter the Title">
+    <input #desc name="desc" [(ngModel)]="descBlank" style="margin-bottom: 1rem;" type="text" placeholder="Enter the Description">
+    <button (click)="addToDo({title:title.value,desc:desc.value})">Add Todo</button>
+</div>
+
+<div *ngIf="!show" >
+    <ul *ngFor="let item of todo">
+        <label style="font-weight: bolder;">Title</label>
+        <li style="margin: 0 0 .5rem 3rem;">{{item.title}}</li>
+        <label style="font-weight: bolder;" >Description</label>
+        <li style="margin: 0 0 .5rem 3rem;" >{{item.desc}}</li>
+        <button (click)="deleteToDo(item)" style="background-color: red; color: wheat;">Delete</button>
+    </ul>
+</div>
+<div *ngIf="show">
+    <h2 style="text-align: center;">There are Nothing to Show!!</h2>
+</div>

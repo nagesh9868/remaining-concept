@@ -1,0 +1,13 @@
+ng <h2>viewChild/viewChildren</h2>
+<div>
+    <p #highlight>This is an Important Message</p>
+    <p #highlight>This is an another Message</p>
+</div>
+
+<div>
+    <button (click)="dec()">+</button>
+    <h4>Counter:-{{childView?.counter}}</h4>
+    <button (click)="inc()" >-</button>
+</div>
+
+<app-counter #childView></app-counter>

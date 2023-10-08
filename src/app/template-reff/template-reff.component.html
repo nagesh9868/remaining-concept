@@ -1,0 +1,36 @@
+<p>template-reff works!</p>
+
+<ng-template #myTemplate>
+    <h2>This is a ng Template Reff</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam veniam quos aut pariatur ex exercitationem vel,
+        dolorum tempora voluptatibus natus eligendi nemo. Minus expedita aspernatur quod sunt consequatur optio id
+        nesciunt recusandae quas obcaecati.</p>
+</ng-template>
+
+<div *ngTemplateOutlet="myTemplate"></div>
+<button (click)="hide()">Click to Hide/Show</button>
+<div *ngIf="isHide">
+    <h1>This is a Hideable Content</h1>
+    <div class="card">
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoJG4MmKYqYrKyNDB6ey3Y-eJIGh5a0gzDTg&usqp=CAU"
+                alt="">
+        </div>
+    
+        <div class="info">
+            <h4>Nike Shoe</h4>
+            <h5>Price: - 1600</h5>
+        </div>
+        <button *ngIf="quantity.length > 0 else notifyMe">Add To Cart</button>
+        <ng-template #notifyMe>
+            <button>Notify Me</button>
+        </ng-template>
+    </div>
+</div>
+
+
+<!-- <ng-template #template let-name='fromContext'>fsadasfasd</ng-template> -->
+
+<ng-template #template template>
+    <h1>Jai Shree Ram</h1>
+</ng-template>

@@ -1,0 +1,177 @@
+
+.dummy-card {
+    background-color: rgb(248, 248, 220);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: floralwhite;
+    box-shadow: inset 0 0 23px rgba(0, 0, 0, 1), 0 40px 40px rgba(0, 0, 0, 0.2), 0 0 0 6px rgba(202, 202, 0,0.5)
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: black;
+    z-index: 100;
+    border-radius: 20px;
+}
+
+.ssHand {
+    width: 1px;
+    height: 50%;
+    background: #3a3335;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border-radius: 100% 100% 0 0;   
+    box-shadow: 4px 2px rgba(0,0,0,0.3);
+}
+
+.mnHand {
+    width: 3px;
+    height: 50%;
+    background: #3a3335;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top: 10%;
+    left: calc(50% - 1px);
+    border-radius: 100% 100% 0 0;
+    box-shadow: 4px 2px rgba(0,0,0,0.3);
+}
+
+.hrHand {
+    width: 5px;
+    height: 40%;
+    background: #3a3335;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top: 18%;
+    left: calc(50% + -2px);
+    border-radius: 100% 100% 0 0;
+    box-shadow: 4px 2px rgba(0,0,0,0.3);
+}
+
+.num {
+    height: 100%;
+    position: absolute;
+    left: calc(50% - 0.5em);
+}
+
+.num div {
+    width: 1em;
+    line-height: 2em;
+    color: #533455;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.num1 {
+    transform: rotate(30deg);
+}
+
+.num1 div {
+    transform: rotate(-30deg);
+}
+
+.num2 {
+    transform: rotate(60deg);
+}
+
+.num2 div {
+    transform: rotate(-60deg);
+}
+
+.num3 {
+    transform: rotate(90deg);
+}
+
+.num3 div {
+    transform: rotate(-90deg);
+}
+
+.num4 {
+    transform: rotate(120deg);
+}
+
+.num4 div {
+    transform: rotate(-120deg);
+}
+
+.num5 {
+    transform: rotate(150deg);
+}
+
+.num5 div {
+    transform: rotate(-150deg);
+}
+
+.num6 {
+    transform: rotate(180deg);
+}
+
+.num6 div {
+    transform: rotate(-180deg);
+}
+
+.num7 {
+    transform: rotate(210deg);
+}
+
+.num7 div {
+    transform: rotate(-210deg);
+}
+
+.num8 {
+    transform: rotate(240deg);
+}
+
+.num8 div {
+    transform: rotate(-240deg);
+}
+
+.num9 {
+    transform: rotate(270deg);
+}
+
+.num9 div {
+    transform: rotate(-270deg);
+}
+
+.num10 {
+    transform: rotate(300deg);
+}
+
+.num10 div {
+    transform: rotate(-300deg);
+}
+
+.num11 {
+    transform: rotate(330deg);
+}
+
+.num11 div {
+    transform: rotate(-330deg);
+}
+
+.num12 {
+    transform: rotate(360deg);
+}
+
+.num12 div {
+    transform: rotate(-360deg);
+}

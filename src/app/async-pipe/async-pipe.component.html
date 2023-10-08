@@ -1,0 +1,16 @@
+<p>async-pipe works!</p>
+<div>
+    Total quantity of Productd = {{quantitiy | async}}
+</div>
+<div class="card" *ngFor="let item of products">
+    <div class="title">
+        <h4>{{item.title}}</h4>
+    </div>
+    <div class="image">
+        <img [src]="item.image" alt="Loading...">
+    </div>
+    <div class="price">
+        <h4>Price: - {{item.price}}</h4>
+    </div>
+    <button>Add To Card</button>
+</div>
